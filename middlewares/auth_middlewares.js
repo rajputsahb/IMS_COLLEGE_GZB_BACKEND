@@ -12,6 +12,7 @@ var checkuserAuth =  async(req,res,next)=>{
             console.log(UserID)
             const user = await userModel.findById(UserID).select('-pass')
             req.user = user
+            console.log(req)
         }
         catch(error){
             res.status(401).send({error: "Please authenticate"})
