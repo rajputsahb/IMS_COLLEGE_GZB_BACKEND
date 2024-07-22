@@ -1,7 +1,7 @@
-import express from "express"
+import express from 'express'
 import cors from "cors"
 import dotenv from "dotenv"
-// import db from "./model/db.js"
+import db from "./model/db.js"
 import mongodb from "./model/db.js"
 import morgan from 'morgan'
 import userRoutes from "./routes/userRoutes.js"

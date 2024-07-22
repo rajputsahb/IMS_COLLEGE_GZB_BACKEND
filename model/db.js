@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 const mongodb = async () => {
-    mongoose.connect("mongodb://localhost:27017/imscollege")
+    mongoose.connect("mongodb+srv://RajputNew123:123@cluster0.solwcxu.mongodb.net/newdatabase4?retryWrites=true&w=majority&appName=Cluster0")
     const db = mongoose.connection
     db.on("connected", () => {
         console.log("database connected")
