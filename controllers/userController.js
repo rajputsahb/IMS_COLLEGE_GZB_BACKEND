@@ -190,6 +190,40 @@ class UserController {
         }
 
     }
+    static deletebyuserid=async(req,res)=>{
+        const { email } = req.body
+        if(!email){
+            res.send({
+                "message":"Enter the Email",
+                "status":"failed"
+            })
+        }
+        try {
+            const user = await userModel.findOneAndDelete({email})
+            if(!user)
+            {
+                res.send({
+                    "message":"Email not found",
+                    "status": "failed"
+                })
+            }
+            res.send({
+                "message":"User is deleted",
+                "status": "success"
+            })
+
+            }  
+        catch (error) {
+            res.send({
+                "message":error,
+                "status":"failed"
+            })
+        }
+        
+       
+       
+    }
+    
 }
 
 export default UserController

@@ -18,6 +18,7 @@ router.post('/registration', UserController.userRegistration)
 router.post('/login',UserController.userLogin)
 router.post('/reset-pass-email',UserController.sendUserPasswordEmail)
 router.patch('/reset-pass/:id/:token',UserController.userPasswordReset)  
+router.delete('/delete', UserController.deletebyuserid)
 
 
 

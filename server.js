@@ -8,6 +8,7 @@ import userRoutes from "./routes/userRoutes.js"
 
 const app = express()
 mongodb()
+app.use(cors())
 
 // middlewares
 app.use(express.json())
